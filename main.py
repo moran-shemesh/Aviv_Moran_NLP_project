@@ -1,5 +1,5 @@
 # The main flow should be here
-pip uninstall matplotlib
+
 python3 -m pip install matplotlib
 
 import streamlit as st
