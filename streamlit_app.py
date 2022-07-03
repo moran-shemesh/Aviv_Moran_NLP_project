@@ -45,6 +45,22 @@ elif Property_Area == 'Semiurban' :
 else :
    Rural=1
   
+
+@st.cache(suppress_st_warning=True)
+def get_fvalue(val):
+    feature_dict = {"No":1,"Yes":2}
+    for key,value in feature_dict.items():
+        if val == key:
+            return value
+
+def get_value(val,my_dict):
+    for key,value in my_dict.items():
+        if val == key:
+            return value
+
+app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction']) #two pages
+
+
 data1={
     'Gender':Gender,
     'Married':Married,
@@ -59,6 +75,6 @@ data1={
     'Property_Area':[Rural,Urban,Semiurban],
     }
 
-feature_list=[ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,data1['Dependents'][0],data1['Dependents'][1],data1['Dependents'][2],data1['Dependents'][3],data1['Property_Area'][0],data1['Property_Area'][1],data1['Property_Area'][2]]
+feature_list=[ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,get_value(Gender,gender_dict),get_fvalue(Married),data1['Dependents'][0],data1['Dependents'][1],data1['Dependents'][2],data1['Dependents'][3],get_value(Education,edu),get_fvalue(Self_Employed),data1['Property_Area'][0],data1['Property_Area'][1],data1['Property_Area'][2]]
 
 single_sample = np.array(feature_list).reshape(1,-1)
