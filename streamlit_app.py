@@ -13,9 +13,14 @@ import numpy as np
 
 st.markdown(f'''
     <style>
-        section[data-testid="stSidebar"] .css-ng1t4o {{width: 19rem;}}
-        section[data-testid="stSidebar"] .css-1d391kg {{width: 19rem;}}
-    </style>
+     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+         width: 450px;
+       }
+       [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+           width: 500px;
+           margin-left: -500px;
+        }
+        </style>
 ''',unsafe_allow_html=True)
 container = st.container()
 
