@@ -1,4 +1,6 @@
 # The main flow should be here
+!pip install matplotlib
+
 import streamlit as st
 import time
 import matplotlib.pyplot as plt
