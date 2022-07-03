@@ -1,5 +1,5 @@
 # conda install matplotlib
-
+# https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 import streamlit as st
 import time
 
@@ -24,7 +24,7 @@ st.sidebar.header("Aviv Lazar & Moran Shemesh")
 
 # input widgets:
 # st.checkbox('yes')
-st.sidebar.text_area('Text to summarize')
+st.sidebar.text_area('Enter text to summarize')
 st.sidebar.radio('Pickc a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
