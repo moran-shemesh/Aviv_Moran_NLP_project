@@ -1,7 +1,11 @@
 # The main flow should be here
 import streamlit as st
-import mymodel as m
 
-st.write("hello world")
-window = st.slider("Forecast Window")
-st.write(m.run(window=window))
+
+kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
+dummy_train_df = pd.read_csv(f'{kaggle_dir}/train_filtered.csv', nrows=10)
+
+
+st.write(dummy_train_df.head(10))
+
+
