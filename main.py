@@ -13,6 +13,15 @@ st.header("Aviv Lazar & Moran Shemesh")
 # st.code("x=2021")
 # st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
+# input widgets:
+# st.checkbox('yes')
+st.button('Start')
+# st.radio('Pick your gender',['Male','Female'])
+# st.selectbox('Pick your gender',['Male','Female'])
+st.multiselect('choose a model',['RankText', 'Bart'])
+st.select_slider("What's your grade?", ['Bad', 'Good', 'Excellent'])
+# st.slider('Pick a number', 0,50)
+
 
 # st.write(dummy_train_df.head(10))
 
