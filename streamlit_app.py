@@ -36,12 +36,12 @@ st.sidebar.header("Aviv Lazar & Moran Shemesh")
 
 # input widgets:
 # st.checkbox('yes')
-st.sidebar.text_area('Enter text to summarize')
-st.sidebar.radio('Pick a model',['RankText', 'Bart'])
+text = st.sidebar.text_area('Enter text to summarize')
+model = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
 st.sidebar.button('Start')
-st.sidebar.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
+grade = st.sidebar.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
 # st.slider('Pick a number', 0,50)
 
 # progress bar:
@@ -57,7 +57,7 @@ df= pd.DataFrame(
     columns=['x', 'y'])
 st.line_chart(df)
 
-
+st.title(text)
 # rand=np.random.normal(1, 2, size=20)
 # fig, ax = plt.subplots()
 # ax.hist(rand, bins=15)
