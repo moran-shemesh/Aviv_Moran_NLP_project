@@ -10,7 +10,7 @@ import numpy as np
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
-
+'''
 st.markdown(
      """
      <style>
@@ -63,7 +63,7 @@ st.line_chart(df)
 # ax.hist(rand, bins=15)
 # st.pyplot(fig)
 
-
+'''
 st.subheader('Sir/Mme , YOU need to fill all necessary informations in order    to get a reply to your loan request !')
     st.sidebar.header("Informations about the client :")
     gender_dict = {"Male":1,"Female":2}
