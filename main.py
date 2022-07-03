@@ -1,9 +1,15 @@
 # The main flow should be here
 import streamlit as st
 import time
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
+
+
+container = st.container()
 
 st.sidebar.title ("Summarization - CNN / Daily Mail")
 st.sidebar.header("Aviv Lazar & Moran Shemesh")
@@ -31,3 +37,7 @@ st.sidebar.success("You did it !")
 # st.write(dummy_train_df.head(10))
 
 
+rand=np.random.normal(1, 2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15)
+st.pyplot(fig)
