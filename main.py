@@ -1,6 +1,6 @@
 # The main flow should be here
 import streamlit as st
-
+import time
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
@@ -21,8 +21,12 @@ st.radio('Pickc a model',['RankText', 'Bart'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
 st.select_slider("What's your grade?", ['Bad', 'Good', 'Excellent'])
 # st.slider('Pick a number', 0,50)
+# progress bar:
+st.progress(10)
+with st.spinner('Working on it...'):
+    time.sleep(10)
 
-
+st.success("You did it !")
 # st.write(dummy_train_df.head(10))
 
 
