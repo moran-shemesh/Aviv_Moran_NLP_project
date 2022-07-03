@@ -1,2 +1,2 @@
 # The main flow should be here
-print "hello world"
+print ("hello world")
