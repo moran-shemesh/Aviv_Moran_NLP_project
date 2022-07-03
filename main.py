@@ -16,9 +16,9 @@ st.header("Aviv Lazar & Moran Shemesh")
 # input widgets:
 # st.checkbox('yes')
 st.button('Start')
-# st.radio('Pick your gender',['Male','Female'])
+# st.radio('Pickc a model',[RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
-st.multiselect('choose a model',['RankText', 'Bart'])
+# st.multiselect('choose a model',['RankText', 'Bart'])
 st.select_slider("What's your grade?", ['Bad', 'Good', 'Excellent'])
 # st.slider('Pick a number', 0,50)
 
