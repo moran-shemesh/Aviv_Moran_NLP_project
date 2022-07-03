@@ -1,6 +1,6 @@
 # The main flow should be here
 
-python3 -m pip install matplotlib
+pip install matplotlib
 
 import streamlit as st
 import time
