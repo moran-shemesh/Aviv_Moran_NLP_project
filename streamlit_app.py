@@ -11,8 +11,9 @@ import numpy as np
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
-st.markdown(f'''
-    <style>
+st.markdown(
+     """
+     <style>
      [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
          width: 450px;
        }
@@ -21,7 +22,8 @@ st.markdown(f'''
            margin-left: -500px;
         }
         </style>
-''',unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True)
 container = st.container()
 
 st.sidebar.title ("Summarization - CNN / Daily Mail")
