@@ -10,6 +10,13 @@ import numpy as np
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
+[theme]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
+
 
 st.markdown(
      """
@@ -37,7 +44,7 @@ st.sidebar.header("Aviv Lazar & Moran Shemesh")
 # input widgets:
 # st.checkbox('yes')
 st.sidebar.text_area('Enter text to summarize')
-st.sidebar.radio('Pickc a model',['RankText', 'Bart'])
+st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
 st.sidebar.button('Start')
