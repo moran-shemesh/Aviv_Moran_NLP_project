@@ -1,5 +1,6 @@
+# link: https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # conda install matplotlib
-# https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
+
 # https://www.datacamp.com/tutorial/streamlit
 import streamlit as st
 import time
