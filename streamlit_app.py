@@ -26,8 +26,7 @@ st.markdown(
         """,
         unsafe_allow_html=True)
 container = st.container()
-st.sidebar.title ("Summ
-arization - CNN / Daily Mail")
+st.sidebar.title ("Text Summarization") 
 st.sidebar.header("Aviv Lazar & Moran Shemesh")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
