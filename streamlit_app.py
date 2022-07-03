@@ -10,7 +10,7 @@ import numpy as np
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
-[theme]
+# [theme]
 primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
