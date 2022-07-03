@@ -25,14 +25,14 @@ st.markdown(
         """,
         unsafe_allow_html=True)
 container = st.container()
-
-st.sidebar.title ("Summarization - CNN / Daily Mail")
+st.sidebar.title ("Summ
+arization - CNN / Daily Mail")
 st.sidebar.header("Aviv Lazar & Moran Shemesh")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
 # st.caption("this is the caption")
 # st.code("x=2021")
-# st.latex(r''' a+a r^1+a r^2+a r^3 ''')
+# st.latex(r'' a+a r^1+a r^2+a r^3 '')
 
 # input widgets:
 # st.checkbox('yes')
