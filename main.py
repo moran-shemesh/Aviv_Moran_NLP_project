@@ -1,6 +1,6 @@
 # The main flow should be here
 
-pip install matplotlib
+conda install matplotlib
 
 import streamlit as st
 import time
