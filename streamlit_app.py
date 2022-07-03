@@ -24,10 +24,11 @@ st.sidebar.header("Aviv Lazar & Moran Shemesh")
 
 # input widgets:
 # st.checkbox('yes')
-st.sidebar.button('Start')
+st.sidebar.text_area('Text to summarize')
 st.sidebar.radio('Pickc a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
+st.sidebar.button('Start')
 st.sidebar.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
 # st.slider('Pick a number', 0,50)
 
