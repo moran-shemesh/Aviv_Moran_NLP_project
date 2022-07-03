@@ -13,13 +13,13 @@ import numpy as np
 
 st.markdown(f'''
     <style>
-        section[data-testid="stSidebar"] .css-ng1t4o {{width: 14rem;}}
-        section[data-testid="stSidebar"] .css-1d391kg {{width: 14rem;}}
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 19rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 19rem;}}
     </style>
 ''',unsafe_allow_html=True)
 container = st.container()
 
-st.stSidebar.title ("Summarization - CNN / Daily Mail")
+st.sidebar.title ("Summarization - CNN / Daily Mail")
 st.sidebar.header("Aviv Lazar & Moran Shemesh")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
