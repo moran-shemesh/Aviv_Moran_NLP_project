@@ -19,7 +19,7 @@ st.markdown(f'''
 ''',unsafe_allow_html=True)
 container = st.container()
 
-st.sidebar.title ("Summarization - CNN / Daily Mail")
+st.stSidebar.title ("Summarization - CNN / Daily Mail")
 st.sidebar.header("Aviv Lazar & Moran Shemesh")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
