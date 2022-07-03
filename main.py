@@ -1,7 +1,6 @@
 # The main flow should be here
 import streamlit as st
 import time
-import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
