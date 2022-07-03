@@ -2,6 +2,9 @@
 
 import streamlit as st
 import time
+
+import pandas as pd
+
 # import matplotlib.pyplot as plt  #fighure out how to use matplotlib
 import numpy as np
 
@@ -35,6 +38,11 @@ st.sidebar.select_slider("What do you think about the summarization?", ['Bad', '
 
 st.sidebar.success("You did it !")
 # st.write(dummy_train_df.head(10))
+
+df= pd.DataFrame(
+    np.random.randn(10, 2),
+    columns=['x', 'y'])
+st.line_chart(df)
 
 
 # rand=np.random.normal(1, 2, size=20)
