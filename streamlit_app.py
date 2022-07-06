@@ -13,6 +13,9 @@ import torch
 # from blurr.text.data.all import *
 # from blurr.text.modeling.all import *
 
+url = ' google drive sharing link'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df = pd.read_csv(path)
 
 
 # import urllib
