@@ -13,10 +13,13 @@ import torch
 #kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
+import urllib.request
 
-path = 'https://drive.google.com/uc?export=download&16XYO5xFM16hXMBshK4orssiTDkhggo98'
+url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
+filename = url.split('/')[-1]
 
-# /view?usp=sharing
+urllib.request.urlretrieve(url, filename)
+
 
 st.markdown(
      """
