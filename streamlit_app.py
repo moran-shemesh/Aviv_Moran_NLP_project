@@ -4,6 +4,7 @@ import streamlit as st
 # import pandas as pd
 import time
 import numpy as np
+!pip install google-colab
 from google.colab import drive
 drive.mount('/content/drive')
 import torch
