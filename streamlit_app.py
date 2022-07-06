@@ -7,8 +7,8 @@ import time
 import numpy as np
 import urllib.request
 import torch
-from google.colab import drive
-drive.mount('/content/drive')
+# from google.colab import drive
+# drive.mount('/content/drive')
 
 # from blurr.text.data.all import *
 # from blurr.text.modeling.all import *
@@ -17,8 +17,8 @@ drive.mount('/content/drive')
 
 # import urllib
 # @st.cache(allow_output_mutation=True)
-kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
-dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
+# kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
+# dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
 # urllib.urlopen(url)
 # 
@@ -93,7 +93,7 @@ st.header(df['article'][0])
 # ax.hist(rand, bins=15)
 # st.pyplot(fig)
 
-loaded_model = torch.load(path, 'rb')
+# loaded_model = torch.load(path, 'rb')
 
 # inf_learn = load_learner(fname='ft_cnndm_export.pkl')
 # inf_learn.blurr_summarize(test_article)
