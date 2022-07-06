@@ -22,9 +22,9 @@ st.markdown(
         """,
         unsafe_allow_html=True)
 container = st.container()
-st.sidebar.title ("Text Summarization") 
+st.title ("Text Summarization") 
 
-st.header("Summary prefferences")
+st.sidebar.header("Summary prefferences")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
 # st.caption("this is the caption")
