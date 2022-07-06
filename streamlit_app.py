@@ -4,8 +4,10 @@ import streamlit as st
 # import pandas as pd
 import time
 import numpy as np
+from google.colab import drive
+drive.mount('/content/drive')
 
-# kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
+kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
 st.markdown(
@@ -67,4 +69,4 @@ st.title(text)
 # ax.hist(rand, bins=15)
 # st.pyplot(fig)
 
-loaded_model = pickle.load(open('ft_cnndm_export_1_epoch.pkl', 'rb'))
+loaded_model = pickle.load(open(f'{kaggle_dir}/orig_data/{type}.csv, 'rb'))
