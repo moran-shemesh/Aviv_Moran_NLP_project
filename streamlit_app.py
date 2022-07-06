@@ -1,5 +1,6 @@
 # https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # https://www.datacamp.com/tutorial/streamlit
+pip install --upgrade -r requirements.txt
 import streamlit as st
 import time
 import numpy as np
