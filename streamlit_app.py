@@ -3,19 +3,31 @@
 import streamlit as st
 # import pandas as pd
 import time
+import torch
 import numpy as np
 import urllib.request
+
+
+
 # !pip install google-colab
 # from google.colab import drive
 # drive.mount('/content/drive')
-import torch
+
 # import urllib
 # @st.cache(allow_output_mutation=True)
-#kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
+# kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
 # urllib.urlopen(url)
 # 
+# main
+
+
+screen
+st.title ("Text Summarization") 
+text = st.text_area('Enter or paste your text')
+st.button('Summarize')
+
 
 url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
 filename = url.split('/')[-1]
@@ -38,10 +50,7 @@ st.markdown(
         unsafe_allow_html=True)
 container = st.container()
 
-# main screen
-st.title ("Text Summarization") 
-text = st.text_area('Enter or paste your text')
-st.button('Summarize')
+
 
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
