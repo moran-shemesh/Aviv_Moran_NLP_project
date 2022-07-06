@@ -1,5 +1,5 @@
 
-
+google-colab==1.0.0
 drive==0.3.2
 streamlit==1.10.0
 matplotlib==3.5.2
