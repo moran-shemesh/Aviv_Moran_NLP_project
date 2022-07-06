@@ -1,12 +1,8 @@
-# conda install matplotlib
 # https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # https://www.datacamp.com/tutorial/streamlit
 import streamlit as st
-import time
-
 import pandas as pd
-
-# import matplotlib.pyplot as plt  #fighure out how to use matplotlib
+import time
 import numpy as np
 
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
@@ -27,7 +23,8 @@ st.markdown(
         unsafe_allow_html=True)
 container = st.container()
 st.sidebar.title ("Text Summarization") 
-st.sidebar.header("Aviv Lazar & Moran Shemesh")
+
+st.header("Summary prefferences")
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
 # st.caption("this is the caption")
@@ -36,7 +33,7 @@ st.sidebar.header("Aviv Lazar & Moran Shemesh")
 
 # input widgets:
 # st.checkbox('yes')
-text = st.sidebar.text_area('Enter text to summarize')
+
 model = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
@@ -50,8 +47,11 @@ grade = st.sidebar.select_slider("What do you think about the summarization?", [
 #     time.sleep(10)
 
 st.sidebar.success("You did it !")
+st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
 # st.write(dummy_train_df.head(10))
 
+
+text = st.sidebar.text_area('Enter text to summarize')
 df= pd.DataFrame(
     np.random.randn(10, 2),
     columns=['x', 'y'])
