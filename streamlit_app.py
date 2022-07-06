@@ -13,8 +13,8 @@ import torch
 #kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 # dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
-url = ' 16XYO5xFM16hXMBshK4orssiTDkhggo98'
-path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+
+path = 'https://drive.google.com/uc?export=download&16XYO5xFM16hXMBshK4orssiTDkhggo98'
 
 # /view?usp=sharing
 
