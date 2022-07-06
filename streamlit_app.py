@@ -1,9 +1,7 @@
 # https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # https://www.datacamp.com/tutorial/streamlit
 import streamlit as st
-# import pandas as pd
 import time
-import torch
 import numpy as np
 import urllib.request
 
