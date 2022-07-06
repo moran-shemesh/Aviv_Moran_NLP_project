@@ -1,7 +1,7 @@
 # https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # https://www.datacamp.com/tutorial/streamlit
 import streamlit as st
-import pandas as pd
+# import pandas as pd
 import time
 import numpy as np
 
@@ -56,10 +56,10 @@ st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
 
 
 
-df= pd.DataFrame(
-    np.random.randn(10, 2),
-    columns=['x', 'y'])
-st.line_chart(df)
+# df= pd.DataFrame(
+#     np.random.randn(10, 2),
+#     columns=['x', 'y'])
+# st.line_chart(df)
 
 st.title(text)
 # rand=np.random.normal(1, 2, size=20)
@@ -67,3 +67,4 @@ st.title(text)
 # ax.hist(rand, bins=15)
 # st.pyplot(fig)
 
+loaded_model = pickle.load(open('ft_cnndm_export_1_epoch.pkl', 'rb'))
