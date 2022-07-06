@@ -10,7 +10,9 @@ import torch
 from google.colab import drive
 drive.mount('/content/drive')
 
-# !pip install google-colab
+# from blurr.text.data.all import *
+# from blurr.text.modeling.all import *
+
 
 
 # import urllib
@@ -92,3 +94,6 @@ st.header(df['article'][0])
 # st.pyplot(fig)
 
 loaded_model = torch.load(path, 'rb')
+
+# inf_learn = load_learner(fname='ft_cnndm_export.pkl')
+# inf_learn.blurr_summarize(test_article)
