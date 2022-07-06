@@ -4,7 +4,7 @@ import streamlit as st
 import time
 import numpy as np
 import urllib.request
-
+import torch
 
 
 # !pip install google-colab
