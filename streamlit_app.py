@@ -21,7 +21,6 @@ import urllib.request
 # main
 
 
-screen
 st.title ("Text Summarization") 
 text = st.text_area('Enter or paste your text')
 st.button('Summarize')
