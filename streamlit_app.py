@@ -22,36 +22,40 @@ st.markdown(
         """,
         unsafe_allow_html=True)
 container = st.container()
-st.title ("Text Summarization") 
 
-st.sidebar.header("Summary prefferences")
+# main screen
+st.title ("Text Summarization") 
+text = st.text_area('Enter or paste your text')
+st.button('Summarize')
+
 # st.markdown("this is the header")
 # st.subheader("this is the subheader")
 # st.caption("this is the caption")
 # st.code("x=2021")
 # st.latex(r'' a+a r^1+a r^2+a r^3 '')
-
 # input widgets:
 # st.checkbox('yes')
 
+# sidebar:
+st.sidebar.header("Summary prefferences")
 model = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
-st.sidebar.button('Start')
-grade = st.sidebar.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
+
+
 # st.slider('Pick a number', 0,50)
 
 # progress bar:
 # st.progress(10)
 # with st.spinner('Working on it...'):
 #     time.sleep(10)
-
-st.sidebar.success("You did it !")
+grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
+#st.sidebar.success("You did it !")
 st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
 # st.write(dummy_train_df.head(10))
 
 
-text = st.sidebar.text_area('Enter text to summarize')
+
 df= pd.DataFrame(
     np.random.randn(10, 2),
     columns=['x', 'y'])
