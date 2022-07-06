@@ -7,16 +7,16 @@ import time
 import numpy as np
 import urllib.request
 import torch
-
+from google.colab import drive
+drive.mount('/content/drive')
 
 # !pip install google-colab
-# from google.colab import drive
-# drive.mount('/content/drive')
+
 
 # import urllib
 # @st.cache(allow_output_mutation=True)
-# kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
-# dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
+kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
+dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
 # urllib.urlopen(url)
 # 
@@ -85,6 +85,7 @@ st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
 # st.line_chart(df)
 
 st.title(text)
+st.header(df['article'][0])
 # rand=np.random.normal(1, 2, size=20)
 # fig, ax = plt.subplots()
 # ax.hist(rand, bins=15)
