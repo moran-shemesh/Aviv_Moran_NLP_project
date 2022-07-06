@@ -69,4 +69,4 @@ st.title(text)
 # ax.hist(rand, bins=15)
 # st.pyplot(fig)
 
-loaded_model = pickle.load(open(f'{kaggle_dir}/orig_data/{type}.csv, 'rb'))
+loaded_model = pickle.load(open(f'{kaggle_dir}/models/bartft_cnndm_export_1_epoch.pkl, 'rb'))
