@@ -36,10 +36,10 @@ st.markdown(
      """
      <style>
      [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-         width: 700px;
+         width: 450px;
        }
        [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-           width: 500px;
+           width: 700px;
            margin-left: -500px;
         }
         </style>
