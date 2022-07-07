@@ -74,10 +74,10 @@ model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
 
 
-like = st.select_slider(
+grade = st.select_slider(
      'What do you think about the summary?',
      options=['Bad', 'Good', 'Excellent'],
-     value=('Excellent'))
+     value=('Good'))
 
 
 
