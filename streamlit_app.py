@@ -94,5 +94,5 @@ st.title(text)
 
 # inf_learn = load_learner(fname='ft_cnndm_export.pkl')
 # inf_learn.blurr_summarize(test_article)
-st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
+st.sidebar.header(" © Aviv Lazar & Moran Shemesh")
 
