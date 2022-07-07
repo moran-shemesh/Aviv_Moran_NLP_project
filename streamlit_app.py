@@ -13,9 +13,9 @@ import torch
 # from blurr.text.data.all import *
 # from blurr.text.modeling.all import *
 
-url = ' google drive sharing link'
-path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-df = pd.read_csv(path)
+# url = ' google drive sharing link'
+# path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+# df = pd.read_csv(path)
 
 
 # import urllib
@@ -33,10 +33,10 @@ text = st.text_area('Enter or paste your text')
 st.button('Summarize')
 
 
-url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
-filename = url.split('/')[-1]
+# url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
+# filename = url.split('/')[-1]
 
-urllib.request.urlretrieve(url, filename)
+# urllib.request.urlretrieve(url, filename)
 
 
 st.markdown(
@@ -66,7 +66,7 @@ container = st.container()
 
 # sidebar:
 st.sidebar.header("Summary prefferences")
-model = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
+model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
 
