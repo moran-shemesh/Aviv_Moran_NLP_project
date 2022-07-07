@@ -36,7 +36,7 @@ st.markdown(
      """
      <style>
      [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-         width: 450px;
+         width: 700px;
        }
        [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
            width: 500px;
