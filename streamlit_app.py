@@ -43,12 +43,12 @@ st.markdown(
            margin-left: -500px;
         }
         </style>
-        <h1 style='text-align: center; color: red;'>Some title</h1>"
+        <h1 style='text-align: bottom; '>(C) Aviv Lazar & Moran Shemesh</h1>"
         """,
         unsafe_allow_html=True)
 container = st.container()
 
-
+st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
 
 
 # st.markdown("this is the header")
@@ -74,7 +74,7 @@ model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 #     time.sleep(10)
 grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
 #st.sidebar.success("You did it !")
-st.sidebar.header(" (C) Aviv Lazar & Moran Shemesh")
+
 # st.write(dummy_train_df.head(10))
 
 
