@@ -39,7 +39,7 @@ st.markdown(
          width: 450px;
        }
        [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-           width: 1700px;
+           width: 500px;
            margin-left: -500px;
         }
         </style>
