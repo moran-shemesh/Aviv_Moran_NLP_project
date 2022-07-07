@@ -71,8 +71,16 @@ model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # st.progress(10)
 # with st.spinner('Working on it...'):
 #     time.sleep(10)
-grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
-st.selectbox("What do you think about the summarization?",  ['Bad', 'Good', 'Excellent'], value='Excellent')
+# grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
+
+
+like = st.select_slider(
+     'What do you think about the summary?',
+     options=['Bad', 'Good', 'Excellent'],
+     value=('Excellent'))
+
+
+
 #st.sidebar.success("You did it !")
 
 # st.write(dummy_train_df.head(10))
