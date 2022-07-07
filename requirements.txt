@@ -1,5 +1,5 @@
 google-colab
-streamlit==1.10.0
+streamlit
 matplotlib==3.5.2
 numpy==1.23.0
 pandas
