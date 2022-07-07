@@ -5,27 +5,20 @@
 import streamlit as st
 import time
 import numpy as np
-import urllib.request
-import torch
+
+# import torch
 # from google.colab import drive
 # drive.mount('/content/drive')
 
-# from blurr.text.data.all import *
-# from blurr.text.modeling.all import *
-
 # url = ' google drive sharing link'
 # path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-# df = pd.read_csv(path)
 
 
-# import urllib
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
-# dummy_train_df = pd.read_csv('data/validation.csv', nrows=10)
 
-# urllib.urlopen(url)
-# 
-# main
+
+
 
 
 st.title ("Text Summarization") 
@@ -50,9 +43,11 @@ st.markdown(
            margin-left: -500px;
         }
         </style>
+        <h1 style='text-align: center; color: red;'>Some title</h1>"
         """,
         unsafe_allow_html=True)
 container = st.container()
+
 
 
 
@@ -100,3 +95,5 @@ st.title(text)
 
 # inf_learn = load_learner(fname='ft_cnndm_export.pkl')
 # inf_learn.blurr_summarize(test_article)
+
+
