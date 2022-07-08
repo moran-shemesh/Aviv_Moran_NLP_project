@@ -9,7 +9,7 @@ import numpy as np
 # from fastai.text.all import *
 # from blurr.text.data.all import *
 # from blurr.text.modeling.all import *
-model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart".from_tf=True)
+model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart",from_tf=True)
 # inf_learn = load_learner(fname='Moran/Moran_Aviv_Bart')
 # import torch
 # from google.colab import drive
