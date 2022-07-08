@@ -5,7 +5,11 @@
 import streamlit as st
 import time
 import numpy as np
+from transformers import pipeline
+from blurr.text.data.all import *
+from blurr.text.modeling.all import *
 
+inf_learn = load_learner(fname='Moran/Moran_Aviv_Bart')
 # import torch
 # from google.colab import drive
 # drive.mount('/content/drive')
@@ -23,6 +27,9 @@ st.title ("Text Summarization")
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 st.button('Summarize')
+
+summary = inf_learn.blurr_summarize(text)
+st.title(summary)
 
 st.title(text)
 
