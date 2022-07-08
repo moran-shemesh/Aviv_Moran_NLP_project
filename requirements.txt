@@ -1,3 +1,4 @@
 streamlit==1.10.0
+ohmeow-blurr
 google==2.0.3
 
