@@ -19,34 +19,45 @@ import numpy as np
 
 
 
-
-
 st.title ("Text Summarization") 
+model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 st.button('Summarize')
 
+st.title(text)
 
+
+grade = st.select_slider(
+     'What do you think about the summary?',
+     options=['Bad', 'Good', 'Excellent'],
+     value=('Good'))
+
+
+st.sidebar.header(" © Aviv Lazar & Moran Shemesh")
 # url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
 # filename = url.split('/')[-1]
 
 # urllib.request.urlretrieve(url, filename)
 
 
-st.markdown(
-     """
-     <style>
-     [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-         width: 450px;
-       }
-       [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-           width: 500px;
-           margin-left: -500px;
-        }
-        </style>
+# st.markdown(
+#      """
+#      <style>
+#      [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+#          width: 450px;
+#        }
+#        [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+#            width: 500px;
+#            margin-left: -500px;
+#         }
+#         </style>
   
-        """,
-        unsafe_allow_html=True)
-container = st.container()
+#         """,
+#         unsafe_allow_html=True)
+# container = st.container()
+
+
+
 
 
 
@@ -59,8 +70,7 @@ container = st.container()
 # st.checkbox('yes')
 
 # sidebar:
-st.sidebar.header("Summary prefferences")
-model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
+
 # st.selectbox('Pick your gender',['Male','Female'])
 # st.multiselect('choose a model',['RankText', 'Bart'])
 
@@ -74,10 +84,6 @@ model_type = st.sidebar.radio('Pick a model',['RankText', 'Bart'])
 # grade = st.select_slider("What do you think about the summarization?", ['Bad', 'Good', 'Excellent'])
 
 
-grade = st.select_slider(
-     'What do you think about the summary?',
-     options=['Bad', 'Good', 'Excellent'],
-     value=('Good'))
 
 
 
@@ -92,7 +98,7 @@ grade = st.select_slider(
 #     columns=['x', 'y'])
 # st.line_chart(df)
 
-st.title(text)
+
 # st.header(df['article'][0])
 # rand=np.random.normal(1, 2, size=20)
 # fig, ax = plt.subplots()
@@ -103,5 +109,5 @@ st.title(text)
 
 # inf_learn = load_learner(fname='ft_cnndm_export.pkl')
 # inf_learn.blurr_summarize(test_article)
-st.sidebar.header(" © Aviv Lazar & Moran Shemesh")
+
 
