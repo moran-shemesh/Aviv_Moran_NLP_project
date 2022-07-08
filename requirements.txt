@@ -1,4 +1,5 @@
 streamlit==1.10.0
 ohmeow-blurr
 transformers
+fastai.text.all
 
