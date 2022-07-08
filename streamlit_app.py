@@ -33,7 +33,7 @@ grade = st.select_slider(
      value=('Good'))
 
 
-st.h3(" © Aviv Lazar & Moran Shemesh")
+st.header(" © Aviv Lazar & Moran Shemesh")
 # url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
 # filename = url.split('/')[-1]
 
