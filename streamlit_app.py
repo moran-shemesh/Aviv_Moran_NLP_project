@@ -32,7 +32,7 @@ st.button('Summarize')
 # summary = inf_learn.blurr_summarize(text)
 # st.title(summary)
 
-st.title(text)
+#st.title(inf_lear_summarize(text))
 
 
 grade = st.select_slider(
