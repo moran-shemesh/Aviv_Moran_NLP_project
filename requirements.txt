@@ -1,5 +1,6 @@
 streamlit==1.10.0
 transformers
 toml==0.10.2
+huggingface-hub==0.8.1
 
 
