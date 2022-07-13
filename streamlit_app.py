@@ -9,7 +9,7 @@ import numpy as np
 from huggingface_hub import from_pretrained_fastai
 from fastai.text.all import *
 
-import blurr.text
+# import blurr.text
 
 # model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart",from_tf=True)
 
@@ -36,7 +36,7 @@ st.button('Summarize')
 # summary = inf_learn.blurr_summarize(text)
 # st.title(summary)
 
-st.title(inf_learn.blurr_summarize(text))
+# st.title(inf_learn.blurr_summarize(text))
 
 
 grade = st.select_slider(
