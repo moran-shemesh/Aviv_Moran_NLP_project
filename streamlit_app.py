@@ -7,6 +7,7 @@ import streamlit as st
 import numpy as np
 # from transformers import BartForConditionalGeneration
 from huggingface_hub import from_pretrained_fastai
+from fastai.text.all import *
 from blurr.text.data.all import *
 from blurr.text.modeling.all import *
 
