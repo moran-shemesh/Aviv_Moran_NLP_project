@@ -7,6 +7,7 @@ import streamlit as st
 import numpy as np
 # from transformers import BartForConditionalGeneration
 from huggingface_hub import from_pretrained_fastai
+from blurr.text import *
 # model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart",from_tf=True)
 
 # inf_learn = load_learner(fname='Moran/Moran_Aviv_Bart')
