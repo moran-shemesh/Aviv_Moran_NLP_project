@@ -6,7 +6,7 @@ import streamlit as st
 # import time
 import numpy as np
 # from transformers import BartForConditionalGeneration
-# from huggingface_hub import from_pretrained_fastai
+from huggingface_hub import from_pretrained_fastai
 # model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart",from_tf=True)
 
 # inf_learn = load_learner(fname='Moran/Moran_Aviv_Bart')
@@ -20,8 +20,8 @@ import numpy as np
 
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
-# repo_id = "Aviv/Moran_Aviv_Bart"
-# inf_learn = from_pretrained_fastai(repo_id)
+repo_id = "Aviv/Moran_Aviv_Bart"
+inf_learn = from_pretrained_fastai(repo_id)
 
 
 st.title ("Text Summarization") 
@@ -32,7 +32,7 @@ st.button('Summarize')
 # summary = inf_learn.blurr_summarize(text)
 # st.title(summary)
 
-#st.title(inf_lear_summarize(text))
+st.title(inf_lear_summarize(text))
 
 
 grade = st.select_slider(
