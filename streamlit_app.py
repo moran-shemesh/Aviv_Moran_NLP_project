@@ -5,7 +5,7 @@
 import streamlit as st
 # import time
 from huggingface_hub import from_pretrained_fastai
-import gensim
+import gensim
 
 
 # textRank
