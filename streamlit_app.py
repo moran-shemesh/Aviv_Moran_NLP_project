@@ -13,32 +13,12 @@ def textrank(corpus, ratio=0.2):
   summaries = [gensim.summarization.summarize(txt, ratio=ratio) for txt in corpus]    
   return summaries
 
-# import numpy as np
-# from transformers import *
-# from transformers import BartForConditionalGeneration
-
-# from fastai.text.all import *
-# from blurr.text.data.all import *
-# from blurr.text.modeling.all import *
-# import blurr.text
-
-# model = BartForConditionalGeneration.from_pretrained("Moran/Moran_Aviv_Bart",from_tf=True)
-
-# inf_learn = load_learner(fname='Moran/Moran_Aviv_Bart')
-# import torch
-# from google.colab import drive
-# drive.mount('/content/drive')
-
-# url = ' google drive sharing link'
-# path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-
-
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 
 # inf_learn = from_pretrained_fastai(repo_id)
 
-st.progress(10)
+
 with st.spinner('Please wait...'):
     time.sleep(10)
 
@@ -46,16 +26,21 @@ st.title ("Text Summarization")
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 
-def start_summarize(text_bla):
+def start_summarize(text_bla, model):
     # text_bla = text_bla + "bla blainf_learn = from_pretrained_fastai(repo_id)
-    repo_id = "Aviv/Moran_Aviv_Bart"
+    if model=="RankText":
+      summary = textrank(text_bla)[0]
+    else:
+      if model=="Bart":
+        summary = "Sorry, we don't support Bart here. Please try Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization"
+    # repo_id = "Aviv/Moran_Aviv_Bart"
     # inf_learn = from_pretrained_fastai(repo_id)
-    summary = textrank(text_bla)[0]
     st.success(summary)
+    time.sleep(10)
     grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
 
   
-st.button('Summarize', on_click=start_summarize, args=(text, ) )
+st.button('Summarize', on_click=start_summarize, args=(text, model_type, ) )
 # increment = st.button('Increment', on_click=increment_counter,
 #     args=(increment_value, ))
 
@@ -80,4 +65,6 @@ st.header(" © Aviv Lazar & Moran Shemesh")
 # url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
 # filename = url.split('/')[-1]
 
+
+# We will not use bart here because loading the model crosses streamlits limit. We get the same error as described here: https://discuss.streamlit.io/t/error-deploying-app-error-checking-streamlit-healthz-connection-refused/9063
 
