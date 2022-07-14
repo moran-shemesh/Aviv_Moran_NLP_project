@@ -51,7 +51,9 @@ def start_summarize(text_bla):
     repo_id = "Aviv/Moran_Aviv_Bart"
     # inf_learn = from_pretrained_fastai(repo_id)
     summary = textrank(text_bla)[0]
-    st.title(summary)
+    st.success(summary)
+    grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
+
   
 st.button('Summarize', on_click=start_summarize, args=(text, ) )
 # increment = st.button('Increment', on_click=increment_counter,
@@ -72,10 +74,6 @@ st.button('Summarize', on_click=start_summarize, args=(text, ) )
 # st.title(inf_learn.blurr_summarize(text))
 
 
-grade = st.select_slider(
-     'What do you think about the summary?',
-     options=['Bad', 'Good', 'Excellent'],
-     value=('Good'))
 
 
 st.header(" © Aviv Lazar & Moran Shemesh")
