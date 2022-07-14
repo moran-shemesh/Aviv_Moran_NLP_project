@@ -29,15 +29,19 @@ model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 
 def start_summarize(long_text, model):
+  num_of_sentences = len(sent_tokenize(long_text))
+  if num_of_sentences > 4:
     if model=="RankText":
       summary = textrank(long_text)[0]
-      if summary=="":
-        summary = long_text
+      # if summary=="":
+      # summary = long_text
     else:
       if model=="Bart":
-        summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
+        summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization"\n"For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
     # repo_id = "Aviv/Moran_Aviv_Bart"
-    # inf_learn = from_pretrained_fastai(repo_id)    
+    # inf_learn = from_pretrained_fastai(repo_id)
+    else:
+      summary = long_text
     st.success(summary)
     time.sleep(10)
     grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
