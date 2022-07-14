@@ -1,13 +1,10 @@
 # https://moran-shemesh-nlp-project-streamlit-app-v9djv3.streamlitapp.com/
 # https://www.datacamp.com/tutorial/streamlit
-# /home/appuser/venv/bin/python -m pip install --upgrade pip
-# pip install --upgrade -r requirements.txt
+
 import streamlit as st
-# import time
+import time
 from huggingface_hub import from_pretrained_fastai
 import gensim
-
-
 
 # textRank
 def textrank(corpus, ratio=0.2):    
@@ -41,7 +38,9 @@ def textrank(corpus, ratio=0.2):
 
 # inf_learn = from_pretrained_fastai(repo_id)
 
-
+st.progress(10)
+with st.spinner('Please wait...'):
+    time.sleep(10)
 
 st.title ("Text Summarization") 
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
