@@ -45,7 +45,7 @@ repo_id = "Aviv/Moran_Aviv_Bart"
 # inf_learn = from_pretrained_fastai(repo_id)
 
 def start_summarize():
-    pass
+    text = text + "bla bla"
 
 st.title ("Text Summarization") 
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
