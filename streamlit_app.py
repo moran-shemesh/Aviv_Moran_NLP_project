@@ -52,7 +52,7 @@ text = st.text_area('Enter or paste your text')
 
 def start_summarize(text_bla):
     # text_bla = text_bla + "bla bla"
-    summary = textrank(text_bla)
+    summary = textrank(text_bla)[0]
     st.title(summary)
   
 st.button('Summarize', on_click=start_summarize, args=(text, ) )
