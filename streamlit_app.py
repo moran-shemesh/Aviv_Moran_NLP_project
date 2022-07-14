@@ -38,7 +38,7 @@ def textrank(corpus, ratio=0.2):
 
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
-repo_id = "Aviv/Moran_Aviv_Bart"
+
 # inf_learn = from_pretrained_fastai(repo_id)
 
 
@@ -48,7 +48,9 @@ model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 
 def start_summarize(text_bla):
-    # text_bla = text_bla + "bla bla"
+    # text_bla = text_bla + "bla blainf_learn = from_pretrained_fastai(repo_id)
+    repo_id = "Aviv/Moran_Aviv_Bart"
+    inf_learn = from_pretrained_fastai(repo_id)
     summary = textrank(text_bla)[0]
     st.title(summary)
   
