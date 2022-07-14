@@ -5,7 +5,7 @@
 import streamlit as st
 # import time
 import numpy as np
-from transformers import *
+# from transformers import *
 # from transformers import BartForConditionalGeneration
 from huggingface_hub import from_pretrained_fastai
 from fastai.text.all import *
