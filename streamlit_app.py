@@ -50,11 +50,11 @@ st.title ("Text Summarization")
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 
-def start_summarize(text_bla):
-    text_bla = text_bla + "bla bla"
-    st.title(text_bla)
+def start_summarize():
+#     text_bla = text_bla + "bla bla"
+    st.title("hi")
   
-st.button('Summarize', on_click=start_summarize, args=(text, ) )
+st.button('Summarize', on_click=start_summarize)#, args=(text, ) )
 # increment = st.button('Increment', on_click=increment_counter,
 #     args=(increment_value, ))
 
