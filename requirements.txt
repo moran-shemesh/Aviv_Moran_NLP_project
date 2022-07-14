@@ -3,6 +3,6 @@ streamlit==1.10.0
 toml==0.10.2
 ohmeow-blurr==1.0.5
 huggingface-hub==0.8.1
-fastai==2.4
+fastai==2.5
 fastcore==1.3.27
 
