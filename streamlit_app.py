@@ -39,7 +39,7 @@ def textrank(corpus, ratio=0.2):
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 repo_id = "Aviv/Moran_Aviv_Bart"
-inf_learn = from_pretrained_fastai(repo_id)
+# inf_learn = from_pretrained_fastai(repo_id)
 
 
 
