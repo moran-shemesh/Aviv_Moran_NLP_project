@@ -1,5 +1,5 @@
 streamlit==1.10.0
-transformers==4.20.1
+transformers
 toml==0.10.2
 ohmeow-blurr
 huggingface-hub==0.8.1
