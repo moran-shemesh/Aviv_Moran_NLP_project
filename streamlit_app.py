@@ -5,7 +5,9 @@ import streamlit as st
 import time
 from huggingface_hub import from_pretrained_fastai
 import gensim
-
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import sent_tokenize
 # textRank
 def textrank(corpus, ratio=0.2):    
   if type(corpus) is str:        
@@ -26,12 +28,11 @@ st.title ("Text Summarization")
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
 
-def start_summarize(text_bla, model):
-    # text_bla = text_bla + "bla blainf_learn = from_pretrained_fastai(repo_id)
+def start_summarize(long_text, model):
     if model=="RankText":
-      summary = textrank(text_bla)[0]
+      summary = textrank(long_text)[0]
       if summary=="":
-        summary = text_bla
+        summary = long_text
     else:
       if model=="Bart":
         summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
