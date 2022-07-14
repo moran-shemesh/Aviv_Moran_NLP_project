@@ -50,7 +50,7 @@ text = st.text_area('Enter or paste your text')
 def start_summarize(text_bla):
     # text_bla = text_bla + "bla blainf_learn = from_pretrained_fastai(repo_id)
     repo_id = "Aviv/Moran_Aviv_Bart"
-    inf_learn = from_pretrained_fastai(repo_id)
+    # inf_learn = from_pretrained_fastai(repo_id)
     summary = textrank(text_bla)[0]
     st.title(summary)
   
@@ -59,9 +59,15 @@ st.button('Summarize', on_click=start_summarize, args=(text, ) )
 #     args=(increment_value, ))
 
 
+# try:
+#   print(x)
+# except:
+#   print("An exception occurred")
 
-
+#   try run the model one of the next code:
+# inf_learn.blurr_generate([text])
 # summary = inf_learn.blurr_summarize(text)
+
 # st.title(text)
 
 # st.title(inf_learn.blurr_summarize(text))
