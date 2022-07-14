@@ -8,15 +8,12 @@ from huggingface_hub import from_pretrained_fastai
 import gensim
 
 
+
 # textRank
 def textrank(corpus, ratio=0.2):    
-
   if type(corpus) is str:        
-
       corpus = [corpus]    
-
   summaries = [gensim.summarization.summarize(txt, ratio=ratio) for txt in corpus]    
-
   return summaries
 
 # import numpy as np
@@ -42,7 +39,7 @@ def textrank(corpus, ratio=0.2):
 # @st.cache(allow_output_mutation=True)
 # kaggle_dir = f"/content/drive/MyDrive/HIT/NLP/Final_Project/cnn_daily_mail_dataset/kaggle/cnn_dailymail"
 repo_id = "Aviv/Moran_Aviv_Bart"
-# inf_learn = from_pretrained_fastai(repo_id)
+inf_learn = from_pretrained_fastai(repo_id)
 
 
 
