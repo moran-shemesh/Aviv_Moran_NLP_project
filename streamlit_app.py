@@ -5,6 +5,19 @@
 import streamlit as st
 # import time
 from huggingface_hub import from_pretrained_fastai
+import gensim
+
+
+# textRank
+def textrank(corpus, ratio=0.2):    
+
+  if type(corpus) is str:        
+
+      corpus = [corpus]    
+
+  summaries = [gensim.summarization.summarize(txt, ratio=ratio) for txt in corpus]    
+
+  return summaries
 
 # import numpy as np
 # from transformers import *
@@ -31,11 +44,17 @@ from huggingface_hub import from_pretrained_fastai
 repo_id = "Aviv/Moran_Aviv_Bart"
 # inf_learn = from_pretrained_fastai(repo_id)
 
+def start_summarize():
+    pass
 
 st.title ("Text Summarization") 
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
-st.button('Summarize')
+st.button('Summarize', on_click=start_summarize)
+
+
+
+
 
 # summary = inf_learn.blurr_summarize(text)
 st.title(text)
