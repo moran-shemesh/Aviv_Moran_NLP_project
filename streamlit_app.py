@@ -37,7 +37,7 @@ def start_summarize(long_text, model):
       # summary = long_text
     else:
       if model=="Bart":
-        summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization"\n"For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
+        summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization . For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
     # repo_id = "Aviv/Moran_Aviv_Bart"
     # inf_learn = from_pretrained_fastai(repo_id)
     else:
