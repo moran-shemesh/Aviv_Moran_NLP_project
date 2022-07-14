@@ -30,11 +30,13 @@ def start_summarize(text_bla, model):
     # text_bla = text_bla + "bla blainf_learn = from_pretrained_fastai(repo_id)
     if model=="RankText":
       summary = textrank(text_bla)[0]
+      if summary=="":
+        summary = text_bla
     else:
       if model=="Bart":
-        summary = "Sorry, we don't support Bart here. Please try Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization"
+        summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
     # repo_id = "Aviv/Moran_Aviv_Bart"
-    # inf_learn = from_pretrained_fastai(repo_id)
+    # inf_learn = from_pretrained_fastai(repo_id)    
     st.success(summary)
     time.sleep(10)
     grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
@@ -61,7 +63,7 @@ st.button('Summarize', on_click=start_summarize, args=(text, model_type, ) )
 
 
 
-st.header(" © Aviv Lazar & Moran Shemesh")
+st.caption(" © Aviv Lazar & Moran Shemesh")
 # url = 'https://drive.google.com/file/d/16XYO5xFM16hXMBshK4orssiTDkhggo98/view?usp=sharing'
 # filename = url.split('/')[-1]
 
