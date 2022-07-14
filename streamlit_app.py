@@ -44,12 +44,15 @@ def textrank(corpus, ratio=0.2):
 repo_id = "Aviv/Moran_Aviv_Bart"
 # inf_learn = from_pretrained_fastai(repo_id)
 
-def start_summarize():
-    text = text + "bla bla"
+
 
 st.title ("Text Summarization") 
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
 text = st.text_area('Enter or paste your text')
+
+def start_summarize():
+    text = text + "bla bla"
+    
 st.button('Summarize', on_click=start_summarize)
 
 
