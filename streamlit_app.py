@@ -41,10 +41,10 @@ def start_summarize(long_text, model):
     # repo_id = "Aviv/Moran_Aviv_Bart"
     # inf_learn = from_pretrained_fastai(repo_id)
   else:
-      summary = long_text
-    st.success(summary)
-    time.sleep(10)
-    grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
+    summary = long_text
+  st.success(summary)
+#   time.sleep(10)
+  grade = st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
 
   
 st.button('Summarize', on_click=start_summarize, args=(text, model_type, ) )
