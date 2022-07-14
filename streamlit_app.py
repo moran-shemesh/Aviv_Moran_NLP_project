@@ -62,7 +62,7 @@ st.button('Summarize', on_click=start_summarize, args=(text, ) )
 
 
 # summary = inf_learn.blurr_summarize(text)
-st.title(text)
+# st.title(text)
 
 # st.title(inf_learn.blurr_summarize(text))
 
