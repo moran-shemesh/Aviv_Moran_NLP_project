@@ -38,7 +38,7 @@ text = st.text_area('Enter or paste your text')
 st.button('Summarize')
 
 # summary = inf_learn.blurr_summarize(text)
-# st.title(summary)
+st.title(text)
 
 # st.title(inf_learn.blurr_summarize(text))
 
