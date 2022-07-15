@@ -6,7 +6,7 @@ import time
 from huggingface_hub import from_pretrained_fastai
 import gensim
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 container_main = st.container()
 container_summarization = st.container()
