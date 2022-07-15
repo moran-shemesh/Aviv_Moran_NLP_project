@@ -25,7 +25,7 @@ def textrank(corpus, ratio=0.2):
 repo_id = "Aviv/Moran_Aviv_Bart"
 inf_learn = from_pretrained_fastai(repo_id)  
 summary = inf_learn.blurr_generate([long_text])[0]['generated_texts']  
-דאץ.success(summary)
+st.success(summary)
 
 
 # summary = ""
