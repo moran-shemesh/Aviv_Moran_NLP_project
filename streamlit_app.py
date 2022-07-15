@@ -8,6 +8,8 @@ import gensim
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
+container_main = st.container()
+container_summarization = st.container()
 # textRank
 def textrank(corpus, ratio=0.2):    
   if type(corpus) is str:        
