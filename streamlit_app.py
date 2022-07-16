@@ -28,11 +28,11 @@ def start_summarize(long_text, model):
       # if summary=="":
       # summary = long_text
     elif model=="Bart":
-      # summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization . For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
-      # streamlit limits are pass while running it, so we will write the code as comments:
-      repo_id = "Aviv/Moran_Aviv_Bart"
-      inf_learn = from_pretrained_fastai(repo_id)  
-      summary = inf_learn.blurr_generate([long_text])[0]['generated_texts']
+      summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization . For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
+      # after one time running the next code, streamlit limits arcrossed, so  will mark this code as comments:
+      # repo_id = "Aviv/Moran_Aviv_Bart"
+      # inf_learn = from_pretrained_fastai(repo_id)  
+      # summary = inf_learn.blurr_generate([long_text])[0]['generated_texts']
   else:
     summary = long_text
   container_summarization.success(summary)
