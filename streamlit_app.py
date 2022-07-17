@@ -49,7 +49,8 @@ start = container_main.button('Summarize', on_click=start_summarize, args=(user_
 #     args=(increment_value, ))
 
 if start:
-    container_summarization.markdown("Summary")
+    # container_summarization.markdown("Summary")
+    container_summarization.markdown("Moran-Aviv Summary")
 #    st.success(summary)
 #    time.sleep(10)
 #    container_summarization.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
