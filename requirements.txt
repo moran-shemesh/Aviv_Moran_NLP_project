@@ -11,3 +11,9 @@ ohmeow-blurr==1.0.5
 gensim==3.6.0
 toml==0.10.2
 fastai==2.7.6
+
+streamlit==1.10.0
+huggingface-hub==0.8.1
+fastcore==1.4.5
+
+
