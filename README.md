@@ -3,6 +3,8 @@
 ## Repo intro
 
 ## Installation | Requirements
+See requirement file:
+https://github.com/moran-shemesh/Aviv_Moran_NLP_project/blob/main/requirements.txt
 
 ## Quickstart
 Try it on the App:
