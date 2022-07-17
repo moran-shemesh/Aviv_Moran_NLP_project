@@ -37,17 +37,16 @@ def start_summarize(long_text, model, size):
 
 st.title ("Text Summarization") 
 model_type = st.radio('Pick a model',['RankText', 'Bart'])
-#textrank_summary_size = 0
-#if model_type=="RankText":
-#  textrank_summary_size = container_main.slider('How long would you like the summary to be? (Percentage of full text)', 10,50)
+textrank_summary_size = 0
+if model_type=="RankText":
+  textrank_summary_size = st.slider('How long would you like the summary to be? (Percentage of full text)', 5,50)
 user_text = st.text_area('Enter or paste text to summarize') 
 start = st.button('Summarize')#, on_click=start_summarize, args=(user_text, model_type,  ) )
-# increment = st.button('Increment', on_click=increment_counter,
-#     args=(increment_value, ))
 
 if start:
   start = False
   st.markdown("Summary")
   with st.spinner("We are summarizing your text..."):
     start_summarize(user_text, model_type, textrank_summary_size)
+
 
