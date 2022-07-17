@@ -8,15 +8,13 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
-
-container_main = st.container()
-container_summarization = st.container()
-
+st.caption(" © Aviv Lazar & Moran Shemesh")
 
 def textrank(corpus, ratio=0.2):    
   if type(corpus) is str:        
       corpus = [corpus]    
-  summaries = [gensim.summarization.summarize(txt, ratio=ratio) for txt in corpus]    
+  summaries = [gensim.summarization.summarize(txt, ratio=ratio) for txt in corpus][0]
+#  st.write(summaries)   
   return summaries
 #end textrank
 
@@ -24,7 +22,7 @@ def start_summarize(long_text, model):
   num_of_sentences = len(sent_tokenize(long_text))
   if num_of_sentences > 4:
     if model=="RankText":
-      summary = textrank(long_text)[0]
+      summary = textrank(long_text)
       # if summary=="":
       # summary = long_text
     elif model=="Bart":
@@ -35,26 +33,24 @@ def start_summarize(long_text, model):
       # summary = inf_learn.blurr_generate([long_text])[0]['generated_texts']
   else:
     summary = long_text
-  container_summarization.success(summary)
   if summary!="":
-    container_summarization.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
-
+    st.success(summary)
+    st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
 #end start_summarize
 
-container_main.title ("Text Summarization") 
-model_type = container_main.radio('Pick a model',['RankText', 'Bart'])
-user_text = container_main.text_area('Enter or paste text to summarize') 
-start = container_main.button('Summarize', on_click=start_summarize, args=(user_text, model_type, ) )
+st.title ("Text Summarization") 
+model_type = st.radio('Pick a model',['RankText', 'Bart'])
+#textrank_summary_size = 0
+#if model_type=="RankText":
+#  textrank_summary_size = container_main.slider('How long would you like the summary to be? (Percentage of full text)', 10,50)
+user_text = st.text_area('Enter or paste text to summarize') 
+start = st.button('Summarize')#, on_click=start_summarize, args=(user_text, model_type,  ) )
 # increment = st.button('Increment', on_click=increment_counter,
 #     args=(increment_value, ))
 
 if start:
-    container_summarization.markdown("Summary")
-#    st.success(summary)
-#    time.sleep(10)
-#    container_summarization.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
-
-with st.spinner('Please wait...'):
-    time.sleep(10)
-container_summarization.caption(" © Aviv Lazar & Moran Shemesh")
+  start = False
+  st.markdown("Summary")
+  with st.spinner("We are summarizing your text..."):
+    start_summarize(user_text, model_type)
 
