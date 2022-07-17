@@ -18,13 +18,11 @@ def textrank(corpus, ratio=0.2):
   return summaries
 #end textrank
 
-def start_summarize(long_text, model):
+def start_summarize(long_text, model, size):
   num_of_sentences = len(sent_tokenize(long_text))
   if num_of_sentences > 4:
     if model=="RankText":
-      summary = textrank(long_text)
-      # if summary=="":
-      # summary = long_text
+      summary = textrank(long_text, size/100)
     elif model=="Bart":
       summary = "Sorry, we don't support Bart here. Please try summarize with Bart at the following link: https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization . For more details aboute the model visit the model's card https://huggingface.co/Aviv/Moran_Aviv_Bart"
       # after one time running the next code, streamlit limits arcrossed, so  will mark this code as comments:
@@ -33,9 +31,8 @@ def start_summarize(long_text, model):
       # summary = inf_learn.blurr_generate([long_text])[0]['generated_texts']
   else:
     summary = long_text
-  if summary!="":
-    st.success(summary)
-    st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
+  st.success(summary)
+  st.select_slider('What do you think about the summary?', options=['Bad', 'Good', 'Excellent'], value=('Good'))
 #end start_summarize
 
 st.title ("Text Summarization") 
@@ -52,5 +49,5 @@ if start:
   start = False
   st.markdown("Summary")
   with st.spinner("We are summarizing your text..."):
-    start_summarize(user_text, model_type)
+    start_summarize(user_text, model_type, textrank_summary_size)
 
