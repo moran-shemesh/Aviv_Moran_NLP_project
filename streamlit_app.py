@@ -44,7 +44,7 @@ def start_summarize(long_text, model):
 container_main.title ("Text Summarization") 
 model_type = container_main.radio('Pick a model',['RankText', 'Bart'])
 user_text = container_main.text_area('Enter or paste text to summarize') 
-start = container_main.button('Summarize', on_click=start_summarize, args=(user_text, model_type, ) )
+start = container_main.button('### Summarize', on_click=start_summarize, args=(user_text, model_type, ) )
 # increment = st.button('Increment', on_click=increment_counter,
 #     args=(increment_value, ))
 
