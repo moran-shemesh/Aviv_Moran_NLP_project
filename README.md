@@ -1,6 +1,7 @@
-## Text Summarization - NLP final project by Moran Shemesh and Aviv Lazar
+# Text Summarization
+NLP final project - Moran Shemesh and Aviv Lazar
 
-# Repo intro
+## Repo intro
 
 ## Installation | Requirements
 See requirement file:
