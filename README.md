@@ -19,13 +19,14 @@ https://github.com/moran-shemesh/Aviv_Moran_NLP_project/blob/main/requirements.t
 Try BART and TextRank on the App: <br>
 https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization
 
-You can download our Bart model from HuggingFace: <br>
-https://huggingface.co/Aviv/Moran_Aviv_Bart
-
-In code: (Make sure you install first the libraries from requirements file): <br>
+#### In code: 
+(Make sure you install first the libraries from requirements file): <br>
 --> repo_id = "Aviv/Moran_Aviv_Bart" <br>
 --> inf_learn = from_pretrained_fastai(repo_id) <br>
 --> generated_summaries = inf_learn.blurr_generate(corpus)
+
+You can download our Bart model from HuggingFace: <br>
+https://huggingface.co/Aviv/Moran_Aviv_Bart
 
 You can find an example of using the model here: <br>
 https://github.com/moran-shemesh/Aviv_Moran_NLP_project/blob/main/experiments/Summarization_with_Blurr_notebook_3_Bart_streamlit.ipynb
