@@ -14,7 +14,7 @@ See requirement file:
 https://github.com/moran-shemesh/Aviv_Moran_NLP_project/blob/main/requirements.txt
 
 ## Quickstart
-Try it on the App: <br>
+Try BART and TextRank on the App: <br>
 https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization
 
 You can download our Bart model from HuggingFace: <br>
