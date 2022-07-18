@@ -35,5 +35,10 @@ https://huggingface.co/Aviv/Moran_Aviv_Bart
 And here you can find an example of using the model: <br>
 https://github.com/moran-shemesh/Aviv_Moran_NLP_project/blob/main/experiments/Summarization_with_Blurr_notebook_3_Bart_streamlit.ipynb
 
+You can find our model-file here: <br>
+https://drive.google.com/file/d/1-0g0KHoan65fiw1ZDuCTfBQI2J82ALPo/view?usp=sharing
+
+IMPORTANT NOTE: 
+
 ## Resources
 
