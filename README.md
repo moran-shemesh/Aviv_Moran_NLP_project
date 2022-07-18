@@ -3,7 +3,7 @@ NLP final project - Moran Shemesh and Aviv Lazar
 
 ## Repo intro
 Data Repo:
-https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail
+https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail <br>
 TODO: share google drive
 
 Cleaned Data Repo:
