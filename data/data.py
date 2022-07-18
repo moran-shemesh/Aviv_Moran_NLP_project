@@ -12,8 +12,8 @@ try:
 except LookupError:
     nltk.download('punkt', quiet=True)
 
-ORIG_DATA_PATH = "D:/python_projects/NLP_Final_Project/data/orig_data"
-CLEAN_DATA_PATH = "D:/python_projects/NLP_Final_Project/data/clean_data"
+ORIG_DATA_PATH = "./orig_data"
+CLEAN_DATA_PATH = "./clean_data"
 
 
 def read_orig_data(data_type, num_samples=-1):
