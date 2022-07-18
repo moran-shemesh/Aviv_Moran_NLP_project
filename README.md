@@ -1,4 +1,4 @@
-# NLP Course Final Project Template
+Text Summarization - NLP final project by Moran Shemesh and Aviv Lazar
 
 ## Repo intro
 
