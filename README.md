@@ -22,7 +22,7 @@ https://huggingface.co/spaces/Moran/Aviv_Moran_Summarization
 You can download our Bart model from HuggingFace: <br>
 https://huggingface.co/Aviv/Moran_Aviv_Bart
 
-In code: (Make sure you install first the libraries from requirements file):
+In code: (Make sure you install first the libraries from requirements file): <br>
 --> repo_id = "Aviv/Moran_Aviv_Bart" <br>
 --> inf_learn = from_pretrained_fastai(repo_id) <br>
 --> generated_summaries = inf_learn.blurr_generate(corpus)
