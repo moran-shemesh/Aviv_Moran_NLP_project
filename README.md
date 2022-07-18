@@ -2,10 +2,10 @@
 NLP final project - Moran Shemesh and Aviv Lazar
 
 ## Repo intro
-There are two options: Kaggle and Google drive. The two options are the same. <br>
+There are two options for getting the original data: Kaggle and Google drive. The two options are the same. <br>
 Data Repo - Kaggle: <br>
 https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail <br>
-Data Repo - google drive:
+Data Repo - google drive: <br>
 https://drive.google.com/drive/folders/1UJRQbIEEOTwRxaCzbgphNFTjlxykEeSF?usp=sharing
 
 Cleaned Data Repo: <br>
