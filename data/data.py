@@ -4,6 +4,7 @@ from nltk.tokenize import sent_tokenize
 import regex as re
 import math
 import os
+import pathlib
 
 # avoiding "up to date" warning message:
 # https://stackoverflow.com/questions/23704510/how-do-i-test-whether-an-nltk-resource-is-already-installed-on-the-machine-runni
@@ -12,8 +13,8 @@ try:
 except LookupError:
     nltk.download('punkt', quiet=True)
 
-ORIG_DATA_PATH = "./orig_data"
-CLEAN_DATA_PATH = "./clean_data"
+ORIG_DATA_LOC = "data\\orig_data"
+CLEAN_DATA_LOC = "data\\clean_data"
 
 
 def read_orig_data(data_type, num_samples=-1):
@@ -23,7 +24,7 @@ def read_orig_data(data_type, num_samples=-1):
     :param num_samples: num samples to read from csv
     :return: data frame
     """
-    data_path = f'{ORIG_DATA_PATH}/{data_type}.csv'
+    data_path = f'{pathlib.Path().resolve()}\\{ORIG_DATA_LOC}\\{data_type}.csv'
     assert os.path.exists(data_path), f"path not exists: {data_path}"
     if num_samples > 0:
         return pd.read_csv(data_path, nrows=num_samples)
@@ -38,7 +39,7 @@ def read_clean_data(data_type, num_samples=-1):
     :param num_samples: num samples to read from csv
     :return: data frame
     """
-    data_path = f'{CLEAN_DATA_PATH}/{data_type}.csv'
+    data_path = f'{pathlib.Path().resolve()}\\{CLEAN_DATA_LOC}\\{data_type}.csv'
     assert os.path.exists(data_path), f"path not exists: {data_path}"
     if num_samples > 0:
         return pd.read_csv(data_path, nrows=num_samples)
