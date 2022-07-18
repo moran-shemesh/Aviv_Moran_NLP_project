@@ -12,7 +12,7 @@ Cleaned Data Repo: <br>
 https://drive.google.com/drive/folders/1YiL61JCVwMQvRwQWcf0cAIyZfSWtmMJF?usp=sharing
 
 IMPORTANT NOTE: for running the project locally, there is a need to create in “data” directory 2 new directories: “orig_data” and “clean_data”.
-The original data files should be located in "orig_data" directory, and the cleaned data in "clean_data".
+The original data files should be located in "orig_data" directory, and the cleaned data files in "clean_data".
 
 
 ## Installation | Requirements
