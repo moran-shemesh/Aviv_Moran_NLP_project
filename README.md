@@ -2,11 +2,11 @@
 NLP final project - Moran Shemesh and Aviv Lazar
 
 ## Repo intro
-Data Repo:
+Data Repo: <br>
 https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail <br>
 TODO: share google drive
 
-Cleaned Data Repo:
+Cleaned Data Repo: <br>
 https://drive.google.com/drive/folders/1YiL61JCVwMQvRwQWcf0cAIyZfSWtmMJF?usp=sharing
 
 ## Installation | Requirements
